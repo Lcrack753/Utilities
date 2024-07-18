@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .wrapper {
+            width: 900px;
+        }
+
+        /* Copy from here */
+        * {
+            box-sizing: border-box;
+        }
+
+        .select-autocomplete {
+            width: 100%;
+            background-color: aqua;
+            position: relative;
+        }
+
+       .select-autocomplete .opt-selected {
+            position: relative;
+            width: 100%;
+            height: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            cursor: pointer;
+        }
+
+        .select-autocomplete .opt-selected::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            font-size: 1rem;
+            font-weight: 700 !important; /* Ajusta el peso de la fuente según sea necesario */
+            width: 1.5rem; /* Ajusta el ancho del pseudo-elemento */
+            height: 1.5rem; /* Ajusta el alto del pseudo-elemento */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%; /* Para hacer un círculo */
+        }
+
+        .select-autocomplete .opt-wrapper {
+            position: absolute;
+            width: calc(100%);
+            padding: 15px;
+            background-color: blue;
+            height: fit-content;
+            display: none;
+        }
+
+
+        .select-autocomplete .opt-wrapper .search {
+            margin-bottom: 15px;
+            height: 1.5rem;
+            width: 100%;
+        }
+
+        .select-autocomplete .opt-wrapper .opt-list {
+            overflow-y: auto;
+            max-height: 250px;
+        }
+
+        .opt-item {
+            display: block;
+            width: 100%;
+            padding: 5px;
+        }
+
+        .opt-item:hover {
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="select-autocomplete" id="select-id">
+            <div class="opt-selected" type="text">Select...</div>
+            <div class="opt-wrapper">
+                <input type="text" class="search" placeholder="Filter">
+                <div class="opt-list">
+                    <div class="opt-item">1</div>
+                    <div class="opt-item">2</div>
+                    <div class="opt-item">3</div>
+                    <div class="opt-item">1</div>
+                    <div class="opt-item">1</div>
+                    <div class="opt-item">1</div>
+                    <div class="opt-item">1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+const initializeAutocomplete = (selectID, url) => {
+    // Elements
+    const select = document.getElementById(selectID);
+    const searchInput = select.querySelector('.search');
+    const optSelected = select.querySelector('.opt-selected');
+    const optWrapper = select.querySelector('.opt-wrapper');
+    const list = select.querySelector('.opt-list');
+
+    // Autocomplete
+    const autocomplete = () => {
+        const q = searchInput.value.trim();
+        console.log(`${url}?q=${encodeURIComponent(q)}`);
+        fetch(`${url}?q=${encodeURIComponent(q)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (!Array.isArray(data)) {
+                    throw new Error('Expected an array of objects in response');
+                }
+
+                // clean list of elements
+                list.innerHTML = '';
+
+                // make element opt-item
+                data.forEach(element => {
+                    const item = document.createElement('div');
+                    item.classList.add('opt-item');
+                    item.setAttribute('data-id', element.id);
+                    item.setAttribute('data-name', element.name);
+                    item.setAttribute('data-last', element.last);
+                    item.textContent = element.str;
+
+                    // add eventclick on opt-item - write in optSelect and hide opt-wrapper
+                    item.addEventListener('click', () => {
+                        optSelected.textContent = element.str;
+                        toggleWrapper(optWrapper, false);
+                    });
+
+                    list.appendChild(item);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching or processing data:', error);
+                // Manejar el error de manera adecuada (por ejemplo, mostrar un mensaje al usuario)
+            });
+    };
+
+    // show-hide wrapper
+    const toggleWrapper = (wrapper, show) => {
+        wrapper.style.display = show ? 'block' : 'none';
+    };
+
+    // search in the url when input-search change
+    searchInput.addEventListener('input', autocomplete);
+
+    // hide wrapper when click outside
+    document.addEventListener('click', (event) => {
+        if (!optWrapper.contains(event.target) && event.target !== optSelected) {
+            toggleWrapper(optWrapper, false);
+        }
+    });
+    
+    // event click on select-autocomplete
+    optSelected.addEventListener('click', () => {
+        toggleWrapper(optWrapper, true);
+        autocomplete();
+    });
+};
+
+// initializeAutocomple when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initializeAutocomplete('select-id', "{% url 'json' %}");
+});
+
+</script>
+</html>
