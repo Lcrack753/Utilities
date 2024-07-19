@@ -8,7 +8,7 @@ def autocompleteJSON(request):
     MAX_RESPONSE = 15
     qs = Autocomplete.objects.all().order_by('name')
 
-    q = request.GET.get('q', '')
+    q: str = request.GET.get('q', '').strip()
     
     keywords = q.split()
     filt = Q()
