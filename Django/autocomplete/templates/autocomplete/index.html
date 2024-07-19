@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autocomplete</title>
     <style>
-        body {
-            display: grid;
-            place-items: center;
-            height: 100vh;
-            width: 100%;
+
+        :root {
+            --o1: #CED4DA;
+            --o2: #F8F9FA;
+
         }
+        * {
+            box-sizing: border-box !important;
+            font-family: monospace;
+            font-size: 1rem;
+        }
+        
+
         .wrapper {
-            width: 900px;
+            width: 800px;
         }
 
-        /* Copy from here */
-        * {
-            box-sizing: border-box;
-        }
 
         .select-autocomplete {
             width: 100%;
-            background-color: aqua;
+            background-color: var(--o1);
             position: relative;
         }
 
        .select-autocomplete .opt-selected {
             position: relative;
             width: 100%;
-            height: 1.5rem;
+            height: 1.75rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,20 +48,20 @@
             transform: translate(-50%, -50%);
             top: 50%;
             font-size: 1rem;
-            font-weight: 700 !important; /* Ajusta el peso de la fuente según sea necesario */
-            width: 1.5rem; /* Ajusta el ancho del pseudo-elemento */
-            height: 1.5rem; /* Ajusta el alto del pseudo-elemento */
+            font-weight: 700 !important; 
+            width: 1.5rem; 
+            height: 1.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 50%; /* Para hacer un círculo */
+            border-radius: 50%;
         }
 
         .select-autocomplete .opt-wrapper {
             position: absolute;
             width: calc(100%);
             padding: 15px;
-            background-color: blue;
+            background-color: var(--o1);
             height: fit-content;
             display: none;
         }
@@ -66,7 +69,7 @@
 
         .select-autocomplete .opt-wrapper .search {
             margin-bottom: 15px;
-            height: 1.5rem;
+            height: 1.75rem;
             width: 100%;
         }
 
@@ -82,9 +85,10 @@
         }
 
         .opt-item:hover {
-            background-color: aliceblue;
+            background-color: var(--o2);
             cursor: pointer;
         }
+
 
     </style>
 </head>
@@ -95,13 +99,7 @@
             <div class="opt-wrapper">
                 <input type="text" class="search" placeholder="Filter">
                 <div class="opt-list">
-                    <div class="opt-item">1</div>
-                    <div class="opt-item">2</div>
-                    <div class="opt-item">3</div>
-                    <div class="opt-item">1</div>
-                    <div class="opt-item">1</div>
-                    <div class="opt-item">1</div>
-                    <div class="opt-item">1</div>
+                    <div class="opt-item">Example</div>
                 </div>
             </div>
         </div>

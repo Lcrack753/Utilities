@@ -13,7 +13,7 @@ def autocompleteJSON(request):
     keywords = q.split()
     filt = Q()
     for keyword in keywords:
-        filt |= Q(name__icontains=keyword) | Q(last__icontains=keyword)
+        filt &= Q(name__icontains=keyword) | Q(last__icontains=keyword)
 
     qs = qs.filter(filt)[:MAX_RESPONSE]
 
