@@ -115,47 +115,52 @@ const initializeAutocomplete = (selectID, url) => {
     const optWrapper = select.querySelector('.opt-wrapper');
     const list = select.querySelector('.opt-list');
 
-    // Autocomplete
+    let timerID;
+
+
     const autocomplete = () => {
         const q = searchInput.value.trim();
         console.log(`${url}?q=${encodeURIComponent(q)}`);
-        fetch(`${url}?q=${encodeURIComponent(q)}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (!Array.isArray(data)) {
-                    throw new Error('Expected an array of objects in response');
-                }
 
-                // clean list of elements
-                list.innerHTML = '';
+        clearTimeout(timerID);
 
-                // make element opt-item
-                data.forEach(element => {
-                    const item = document.createElement('div');
-                    item.classList.add('opt-item');
-                    item.setAttribute('data-id', element.id);
-                    item.setAttribute('data-name', element.name);
-                    item.setAttribute('data-last', element.last);
-                    item.textContent = element.str;
+        timerID = setTimeout(() => {
+            fetch(`${url}?q=${encodeURIComponent(q)}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (!Array.isArray(data)) {
+                        throw new Error('Expected an array of objects in response');
+                    }
 
-                    // add eventclick on opt-item - write in optSelect and hide opt-wrapper
-                    item.addEventListener('click', () => {
-                        optSelected.textContent = element.str;
-                        toggleWrapper(optWrapper, false);
+                    // Limpiar la lista de elementos
+                    list.innerHTML = '';
+
+                    // Crear elementos opt-item
+                    data.forEach(element => {
+                        const item = document.createElement('div');
+                        item.classList.add('opt-item');
+                        item.setAttribute('data-id', element.id);
+                        item.setAttribute('data-name', element.name);
+                        item.setAttribute('data-last', element.last);
+                        item.textContent = element.str;
+
+                        item.addEventListener('click', () => {
+                            optSelected.textContent = element.str;
+                            toggleWrapper(optWrapper, false);
+                        });
+
+                        list.appendChild(item);
                     });
-
-                    list.appendChild(item);
+                })
+                .catch(error => {
+                    console.error('Error fetching or processing data:', error);
                 });
-            })
-            .catch(error => {
-                console.error('Error fetching or processing data:', error);
-                // Manejar el error de manera adecuada (por ejemplo, mostrar un mensaje al usuario)
-            });
+        }, 500);
     };
 
     // show-hide wrapper
@@ -176,8 +181,9 @@ const initializeAutocomplete = (selectID, url) => {
     // event click on select-autocomplete
     optSelected.addEventListener('click', () => {
         toggleWrapper(optWrapper, true);
-        autocomplete();
     });
+    
+    autocomplete();
 };
 
 // initializeAutocomple when page loads
