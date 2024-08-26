@@ -116,80 +116,104 @@ const initializeAutocomplete = (selectID, url) => {
     const list = select.querySelector('.opt-list');
 
     let timerID;
+    let currentPage = 1;
+    let isLoading = false;
+    let hasMoreResults = true;
 
+    const fetchData = (page) => {
+        const q = searchInput.value.trim();
+        const requestUrl = `${url}?q=${encodeURIComponent(q)}&page=${page}`;
+        
+        if (isLoading || !hasMoreResults) return;
+
+        isLoading = true;
+
+        fetch(requestUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (!data.results || !Array.isArray(data.results)) {
+                    throw new Error('Expected an array of objects in response');
+                }
+
+                if (data.results.length < 1) {
+                    hasMoreResults = false; // No more results to load
+                }
+
+                // Append new items to the list
+                data.results.forEach(element => {
+                    const item = document.createElement('div');
+                    item.classList.add('opt-item');
+                    item.setAttribute('data-id', element.id);
+                    item.setAttribute('data-name', element.name);
+                    item.setAttribute('data-last', element.last);
+                    item.textContent = element.str;
+
+                    item.addEventListener('click', () => {
+                        optSelected.textContent = element.str;
+                        toggleWrapper(optWrapper, false);
+                    });
+
+                    list.appendChild(item);
+                });
+
+                isLoading = false;
+                currentPage += 1;
+            })
+            .catch(error => {
+                console.error('Error fetching or processing data:', error);
+                isLoading = false;
+            });
+    };
 
     const autocomplete = () => {
-        const q = searchInput.value.trim();
-        console.log(`${url}?q=${encodeURIComponent(q)}`);
-
         clearTimeout(timerID);
 
         timerID = setTimeout(() => {
-            fetch(`${url}?q=${encodeURIComponent(q)}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (!Array.isArray(data)) {
-                        throw new Error('Expected an array of objects in response');
-                    }
-
-                    // Limpiar la lista de elementos
-                    list.innerHTML = '';
-
-                    // Crear elementos opt-item
-                    data.forEach(element => {
-                        const item = document.createElement('div');
-                        item.classList.add('opt-item');
-                        item.setAttribute('data-id', element.id);
-                        item.setAttribute('data-name', element.name);
-                        item.setAttribute('data-last', element.last);
-                        item.textContent = element.str;
-
-                        item.addEventListener('click', () => {
-                            optSelected.textContent = element.str;
-                            toggleWrapper(optWrapper, false);
-                        });
-
-                        list.appendChild(item);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching or processing data:', error);
-                });
+            list.innerHTML = ''; // Clear the list when new search is made
+            currentPage = 1; // Reset page to 1 for new search
+            fetchData(currentPage);
         }, 500);
     };
 
-    // show-hide wrapper
     const toggleWrapper = (wrapper, show) => {
         wrapper.style.display = show ? 'block' : 'none';
     };
 
-    // search in the url when input-search change
-    searchInput.addEventListener('input', autocomplete);
+    // Fetch more data when scrolled to the bottom
+    const loadMoreOnScroll = () => {
+        list.addEventListener('scroll', () => {
+            if (list.scrollTop + list.clientHeight >= list.scrollHeight) {
+                fetchData(currentPage);
+            }
+        });
+    };
 
-    // hide wrapper when click outside
+    // Initial data fetch and event bindings
+    searchInput.addEventListener('input', autocomplete);
     document.addEventListener('click', (event) => {
         if (!optWrapper.contains(event.target) && event.target !== optSelected) {
             toggleWrapper(optWrapper, false);
         }
     });
-    
-    // event click on select-autocomplete
+
     optSelected.addEventListener('click', () => {
         toggleWrapper(optWrapper, true);
     });
-    
+
     autocomplete();
+    loadMoreOnScroll();
 };
 
-// initializeAutocomple when page loads
+// Initialize autocomplete when page loads
 document.addEventListener('DOMContentLoaded', () => {
     initializeAutocomplete('select-id', "{% url 'json' %}");
 });
-
 </script>
+
+
 </html>
