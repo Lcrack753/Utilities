@@ -1,0 +1,615 @@
+[
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "unicodedata",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unicodedata",
+        "description": "unicodedata",
+        "detail": "unicodedata",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Mapping",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "django",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django",
+        "description": "django",
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Autocomplete",
+        "importPath": "autocomplete.models",
+        "description": "autocomplete.models",
+        "isExtraImport": true,
+        "detail": "autocomplete.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Paginator",
+        "importPath": "django.core.paginator",
+        "description": "django.core.paginator",
+        "isExtraImport": true,
+        "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "BestMatch",
+        "kind": 6,
+        "importPath": "BestMatch.BestMatch.bestmatch",
+        "description": "BestMatch.BestMatch.bestmatch",
+        "peekOfCode": "class BestMatch:\n    def __init__(self, text: str = '') -> None:\n        self.text = text\n    @property\n    def norm_text(self):\n        return normalize_text(self.text)\n    def find_in_texts(self, txts: Iterable[str]) -> list:\n        txts = list(enumerate(txts))\n        scores = [(i, best_match_score(self.text, txt)) for i, txt in txts]\n        max_score = max(score for _, score in scores)",
+        "detail": "BestMatch.BestMatch.bestmatch",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_text",
+        "kind": 2,
+        "importPath": "BestMatch.BestMatch.bestmatch",
+        "description": "BestMatch.BestMatch.bestmatch",
+        "peekOfCode": "def normalize_text(text: str) -> str:\n    text = re.sub(r'[^\\w\\s]', ' ', text)\n    text = text.upper()\n    text = re.sub(r'\\s+', ' ', text.strip())\n    text = unicodedata.normalize('NFD', text)\n    text = ''.join(c for c in text if not unicodedata.combining(c))\n    return text\ndef to_vector(txt: str, wordbook: set) -> list:\n    txt = normalize_text(txt).split()\n    return [txt.count(word) for word in wordbook]",
+        "detail": "BestMatch.BestMatch.bestmatch",
+        "documentation": {}
+    },
+    {
+        "label": "to_vector",
+        "kind": 2,
+        "importPath": "BestMatch.BestMatch.bestmatch",
+        "description": "BestMatch.BestMatch.bestmatch",
+        "peekOfCode": "def to_vector(txt: str, wordbook: set) -> list:\n    txt = normalize_text(txt).split()\n    return [txt.count(word) for word in wordbook]\ndef get_wordbook(txt1: str, txt2: str) -> set:\n    txt1 = normalize_text(txt1).split()\n    txt2 = normalize_text(txt2).split()\n    return set(txt1).union(set(txt2))\ndef cosine_similarity(v1: list, v2: list) -> float:\n    dot_product = sum(a * b for a, b in zip(v1, v2))\n    norm_v1 = math.sqrt(sum(a * a for a in v1))",
+        "detail": "BestMatch.BestMatch.bestmatch",
+        "documentation": {}
+    },
+    {
+        "label": "get_wordbook",
+        "kind": 2,
+        "importPath": "BestMatch.BestMatch.bestmatch",
+        "description": "BestMatch.BestMatch.bestmatch",
+        "peekOfCode": "def get_wordbook(txt1: str, txt2: str) -> set:\n    txt1 = normalize_text(txt1).split()\n    txt2 = normalize_text(txt2).split()\n    return set(txt1).union(set(txt2))\ndef cosine_similarity(v1: list, v2: list) -> float:\n    dot_product = sum(a * b for a, b in zip(v1, v2))\n    norm_v1 = math.sqrt(sum(a * a for a in v1))\n    norm_v2 = math.sqrt(sum(b * b for b in v2))\n    if norm_v1 == 0 or norm_v2 == 0:\n        return 0.0",
+        "detail": "BestMatch.BestMatch.bestmatch",
+        "documentation": {}
+    },
+    {
+        "label": "cosine_similarity",
+        "kind": 2,
+        "importPath": "BestMatch.BestMatch.bestmatch",
+        "description": "BestMatch.BestMatch.bestmatch",
+        "peekOfCode": "def cosine_similarity(v1: list, v2: list) -> float:\n    dot_product = sum(a * b for a, b in zip(v1, v2))\n    norm_v1 = math.sqrt(sum(a * a for a in v1))\n    norm_v2 = math.sqrt(sum(b * b for b in v2))\n    if norm_v1 == 0 or norm_v2 == 0:\n        return 0.0\n    return dot_product / (norm_v1 * norm_v2)\ndef best_match_score(txt1: str, txt2: str) -> float:\n    wordbook = get_wordbook(txt1, txt2)\n    v1 = to_vector(txt1, wordbook)",
+        "detail": "BestMatch.BestMatch.bestmatch",
+        "documentation": {}
+    },
+    {
+        "label": "best_match_score",
+        "kind": 2,
+        "importPath": "BestMatch.BestMatch.bestmatch",
+        "description": "BestMatch.BestMatch.bestmatch",
+        "peekOfCode": "def best_match_score(txt1: str, txt2: str) -> float:\n    wordbook = get_wordbook(txt1, txt2)\n    v1 = to_vector(txt1, wordbook)\n    v2 = to_vector(txt2, wordbook)\n    return cosine_similarity(v1, v2)\nclass BestMatch:\n    def __init__(self, text: str = '') -> None:\n        self.text = text\n    @property\n    def norm_text(self):",
+        "detail": "BestMatch.BestMatch.bestmatch",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_text",
+        "kind": 2,
+        "importPath": "BestMatch.BestMatch.utils",
+        "description": "BestMatch.BestMatch.utils",
+        "peekOfCode": "def normalize_text(text: str) -> str:\n    text = re.sub(r'[^\\w\\s]', ' ', text)\n    text = text.upper()\n    # Eliminar espacios al principio y al final, y reducir múltiples espacios internos a uno solo\n    text = re.sub(r'\\s+', ' ', text.strip())\n    # Normalizar para eliminar acentos y tildes\n    text = unicodedata.normalize('NFD', text)\n    text = ''.join(c for c in text if not unicodedata.combining(c))\n    return text\nif __name__ == '__main__':",
+        "detail": "BestMatch.BestMatch.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Django.autocomplete.migrations.0001_initial",
+        "description": "Django.autocomplete.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Autocomplete',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=25)),",
+        "detail": "Django.autocomplete.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Django.autocomplete.migrations.0002_alter_autocomplete_id",
+        "description": "Django.autocomplete.migrations.0002_alter_autocomplete_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('autocomplete', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='autocomplete',\n            name='id',\n            field=models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False),\n        ),",
+        "detail": "Django.autocomplete.migrations.0002_alter_autocomplete_id",
+        "documentation": {}
+    },
+    {
+        "label": "AutocompleteConfig",
+        "kind": 6,
+        "importPath": "Django.autocomplete.apps",
+        "description": "Django.autocomplete.apps",
+        "peekOfCode": "class AutocompleteConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'autocomplete'",
+        "detail": "Django.autocomplete.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Autocomplete",
+        "kind": 6,
+        "importPath": "Django.autocomplete.models",
+        "description": "Django.autocomplete.models",
+        "peekOfCode": "class Autocomplete(models.Model):\n    name = models.CharField(max_length=25)\n    last = models.CharField(max_length=25)\n    age = models.IntegerField()\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    def __str__(self) -> str:\n        return f\"{self.last.upper()} {self.name}\"",
+        "detail": "Django.autocomplete.models",
+        "documentation": {}
+    },
+    {
+        "label": "populate_data",
+        "kind": 2,
+        "importPath": "Django.autocomplete.populate_db",
+        "description": "Django.autocomplete.populate_db",
+        "peekOfCode": "def populate_data(num_entries):\n    for _ in range(num_entries):\n        # Genera datos aleatorios usando Faker\n        instance = Autocomplete(\n            name=fake.name(),\n            last=fake.last_name(),\n            age=random.randint(10,80),\n            # Añade más campos según tu modelo\n        )\n        instance.save()",
+        "detail": "Django.autocomplete.populate_db",
+        "documentation": {}
+    },
+    {
+        "label": "fake",
+        "kind": 5,
+        "importPath": "Django.autocomplete.populate_db",
+        "description": "Django.autocomplete.populate_db",
+        "peekOfCode": "fake = Faker()\ndef populate_data(num_entries):\n    for _ in range(num_entries):\n        # Genera datos aleatorios usando Faker\n        instance = Autocomplete(\n            name=fake.name(),\n            last=fake.last_name(),\n            age=random.randint(10,80),\n            # Añade más campos según tu modelo\n        )",
+        "detail": "Django.autocomplete.populate_db",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Django.autocomplete.urls",
+        "description": "Django.autocomplete.urls",
+        "peekOfCode": "urlpatterns = [\n    path('json', views.autocompleteJSON, name='json'),\n    path('example', views.example)\n]",
+        "detail": "Django.autocomplete.urls",
+        "documentation": {}
+    },
+    {
+        "label": "autocompleteJSON",
+        "kind": 2,
+        "importPath": "Django.autocomplete.views",
+        "description": "Django.autocomplete.views",
+        "peekOfCode": "def autocompleteJSON(request):\n    MAX_RESPONSE_PER_PAGE = 15\n    qs = Autocomplete.objects.all().order_by('name')\n    q: str = request.GET.get('q', '').strip()\n    keywords = q.split()\n    filt = Q()\n    for keyword in keywords:\n        filt &= Q(name__icontains=keyword) | Q(last__icontains=keyword)\n    qs = qs.filter(filt)\n    paginator = Paginator(qs,MAX_RESPONSE_PER_PAGE)",
+        "detail": "Django.autocomplete.views",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 2,
+        "importPath": "Django.autocomplete.views",
+        "description": "Django.autocomplete.views",
+        "peekOfCode": "def example(request):\n    return render(request,'autocomplete/index.html')",
+        "detail": "Django.autocomplete.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Django.config.asgi",
+        "description": "Django.config.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "Django.config.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-uzjo-eg4b&_1$%h&kgv04=tx+-#a-$5rtrt0+j0b=(8(2u7x#0'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-uzjo-eg4b&_1$%h&kgv04=tx+-#a-$5rtrt0+j0b=(8(2u7x#0'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'autocomplete'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'autocomplete'\n]\nMIDDLEWARE = [",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'config.urls'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "ROOT_URLCONF = 'config.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'config.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "Django.config.settings",
+        "description": "Django.config.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Django.config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Django.config.urls",
+        "description": "Django.config.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('autocomplete/', include('autocomplete.urls'))\n]",
+        "detail": "Django.config.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Django.config.wsgi",
+        "description": "Django.config.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "Django.config.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Django.manage",
+        "description": "Django.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "Django.manage",
+        "documentation": {}
+    }
+]
