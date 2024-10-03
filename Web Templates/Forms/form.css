@@ -4,7 +4,7 @@
   --color-text: #333333;
   --color-text-secondary: #666666;
   --color-primary: #007bff;
-  --color-secondary: #6c757d;
+  --color-secondary: #f0f0f0;
   --color-border: #e0e0e0;
   --color-link: #007bff;
   --color-link-hover: #0056b3;
@@ -20,7 +20,7 @@
   --color-text: #e0e0e0;
   --color-text-secondary: #b0b0b0;
   --color-primary: #1e90ff;
-  --color-secondary: #6c757d;
+  --color-secondary: #36383b;
   --color-border: #333333;
   --color-link: #1e90ff;
   --color-link-hover: #63a4ff;
@@ -55,7 +55,7 @@ body {
   padding: 10px;
   font-size: 1rem;
 
-  >div {
+  >* {
     margin-top: 30px;
   }
 
@@ -185,12 +185,101 @@ body {
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
+
 .form-group.date {
   width: 18ch;
+
   input {
     color: var(--color-text-secondary);
   }
-  input.has-date{
+
+  input.has-date {
     color: var(--color-text);
   }
+}
+
+/* ---------------CHECKBOX AND RADIOBUTTON------------------ */
+.form-box {
+  font-size: 1rem;
+  display: flex;
+  width: fit-content;
+  -webkit-user-select: none;
+  label {
+    cursor: pointer;
+    padding: .4em 0.5em;
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+    &:hover {
+    background-color: var(--color-hover);
+    }
+  }
+  label:only-child {
+    border-radius: 0.5em;
+  }
+}
+.form-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form-box label:has(input:checked) {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+.form-box.column {
+  flex-direction: column;
+  label:first-child {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+  }
+  label:last-child {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+}
+.form-box.row {
+  flex-direction: row;
+  label:first-child {
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+  label:last-child {
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+}
+/* ----------------FILE INPUT---------------------- */
+.custom-file-input {
+  position: relative;
+  min-width: 20ch;
+  height: 2em;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  input {
+    visibility: hidden;
+    width: 0;
+  }
+  &:hover {
+    background-color: var(--color-hover);
+  }
+  &.file-selected {
+    background-color: var(--color-accent);
+    &::after {
+      color: var(--color-text);
+    }
+  }
+}
+.custom-file-input::after {
+  position: absolute;
+  content: 'Upload File';
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--color-text-secondary);
+  top: 50%;
+  right: 50%;
+  translate: 50% -50%;
 }
