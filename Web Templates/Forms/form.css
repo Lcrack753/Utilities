@@ -53,11 +53,14 @@ body {
 }
 
 #form-styled {
-  padding: 10px;
+  padding: 30px;
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
   >* {
-    margin-top: 30px;
+    /* margin-top: 30px; */
   }
 
   /* border: #0056b3 solid 1px; */
@@ -66,24 +69,27 @@ body {
 .form-group {
   position: relative;
   width: 80vw;
+  height: auto;
 
   button {
+    font-size: inherit;
     position: absolute;
     right: 0;
-    bottom: calc(50% - .8em);
+    top: 50%;
+    translate: 0 -50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 1.6em;
-    width: 1.6em;
+    height: 1.2em;
+    width: 1.2em;
 
     svg {
       fill: var(--color-accent);
       height: 100%;
-      width: 100%;
+      width: auto;
     }
   }
 }
@@ -108,8 +114,9 @@ body {
   font-size: 1.2em;
   font-weight: bold;
   position: absolute;
-  bottom: calc(50% - 0.6em);
-  right: -15px;
+  top: 50%;
+  translate: 0 -50%;
+  right: -1ch;
   color: var(--color-accent);
   display: flex;
   justify-content: center;
@@ -201,23 +208,28 @@ body {
 
 /* ---------------CHECKBOX AND RADIOBUTTON------------------ */
 .form-box {
-  font-size: 1em;
+  font-size: inherit;
   display: flex;
   width: fit-content;
   -webkit-user-select: none;
+
   label {
+    font-size: inherit;
     cursor: pointer;
-    padding: .4em 0.5em;
+    padding: .5em 1em;
     background-color: var(--color-secondary);
     color: var(--color-text-secondary);
+
     &:hover {
-    background-color: var(--color-hover);
+      background-color: var(--color-hover);
     }
   }
+
   label:only-child {
     border-radius: 0.5em;
   }
 }
+
 .form-box input {
   position: absolute;
   opacity: 0;
@@ -225,55 +237,72 @@ body {
   height: 0;
   width: 0;
 }
+
 .form-box label:has(input:checked) {
   background-color: var(--color-accent);
   color: var(--color-text);
 }
+
 .form-box.column {
   flex-direction: column;
+
   label:first-child {
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
   }
+
   label:last-child {
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
   }
 }
+
 .form-box.row {
   flex-direction: row;
+
   label:first-child {
     border-top-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
   }
+
   label:last-child {
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
   }
 }
+
 /* ----------------FILE INPUT---------------------- */
 .custom-file-input {
   position: relative;
-  min-width: 20ch;
+  width: 25ch;
   height: 2em;
   background-color: var(--color-secondary);
   cursor: pointer;
   outline: none;
   border: none;
+
   input {
     visibility: hidden;
     width: 0;
   }
+
   &:hover {
     background-color: var(--color-hover);
   }
+
   &.file-selected {
     background-color: var(--color-accent);
+
     &::after {
       color: var(--color-text);
     }
+
+    .arrow {
+      visibility: hidden;
+    }
   }
 }
+
 .custom-file-input::after {
   position: absolute;
   content: 'Upload File';
@@ -283,4 +312,20 @@ body {
   top: 50%;
   right: 50%;
   translate: 50% -50%;
+}
+
+.custom-file-input .arrow {
+  position: absolute;
+  font-size: inherit;
+  height: 1.5em;
+  width: 1.5em;
+  right: .5em;
+  top: 50%;
+  translate: 0 -50%;
+
+  svg {
+    fill: var(--color-text-secondary);
+    width: 100%;
+    height: auto;
+  }
 }
